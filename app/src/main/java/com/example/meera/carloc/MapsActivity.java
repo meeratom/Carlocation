@@ -70,12 +70,13 @@ public class MapsActivity extends FragmentActivity {
     private void setUpMap() {
         sharedpreferences = getSharedPreferences(LOCPREFERENCES, Context.MODE_PRIVATE);
         Gson gson = new Gson();
-        String loc_json = sharedpreferences.getString(LocationKey,"");
+        String loc_json = sharedpreferences.getString(LocationKey,null);
         Location location = gson.fromJson(loc_json, Location.class);
 
         mMap.moveCamera(CameraUpdateFactory.zoomTo(20));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(location.getLatitude(), location.getLongitude())));
         mMap.addMarker(new MarkerOptions().position(new LatLng(location.getLatitude(), location.getLongitude())).title("Marker"));
+        mMap.setMyLocationEnabled(true);
 
     }
 }

@@ -10,19 +10,28 @@
         android:layout_height="wrap_content"
         android:text="@string/park"
         android:id="@+id/button"
+        android:layout_marginTop="65dp"
+        android:onClick="carParked"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="90dp"
-        android:onClick="carParked"/>
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/find_car"
         android:id="@+id/button2"
-        android:layout_marginBottom="142dp"
-        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
         android:layout_alignLeft="@+id/button"
         android:layout_alignStart="@+id/button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/directions_to_car"
+        android:id="@+id/button3"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="62dp"
+        android:onClick="directionsToCar"/>
 
 </RelativeLayout>
